@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["vite.config.ts", "src/**/*.ts", "src/**/*.tsx"]
+}
+
+
+  
