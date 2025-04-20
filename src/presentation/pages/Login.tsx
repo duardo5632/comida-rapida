@@ -2,19 +2,27 @@ import "../../styles/login.css"
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { loginUser } from "../../application/useCases/LoginUser";
-
+import { useNavigate } from "react-router-dom";
+//porque es default
 export default function Login() {
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = async () => {
         try {
             setErrorMessage("");
             //se envia todo los metodos de validacion a la funcion loginUser
             const response = await loginUser(name, password);
-            console.log("Respuesta del API:", response);
+
+            if(response){
+                navigate("/menu"); //Redirige a la página de inicio si la respuesta
+            }else{
+                setErrorMessage("contraseña o nombre incorrecto"); //Si la respuesta no es exitosa, muestra un mensaje de error
+            }
+            
         }catch(error){
             setErrorMessage((error as Error).message);
         }
@@ -68,9 +76,11 @@ export default function Login() {
 
                 <div className="container-button">
                     <button 
-                    className="button"
-                    onClick={handleSubmit} /* Llama a la función `handleSubmit` cuando el usuario hace clic */>
-                        Iniciar seccion
+                        type="button"        // ✅ Importante: evita que haga un submit y recargue la página
+                        onClick={handleSubmit} // ✅ Aquí se ejecuta tu función
+                        className="button"
+                        >
+                        Iniciar sesión
                     </button>
                 </div>
             </div>
