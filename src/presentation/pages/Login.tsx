@@ -2,6 +2,7 @@ import "../../styles/login.css"
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { loginUser } from "../../application/useCases/LoginUser";
+import { authAPI } from "../../infrastructure/api/AuthAPI";
 import { useNavigate } from "react-router-dom";
 //porque es default
 export default function Login() {
@@ -15,7 +16,7 @@ export default function Login() {
         try {
             setErrorMessage("");
             //se envia todo los metodos de validacion a la funcion loginUser
-            const response = await loginUser(name, password);
+            const response = await loginUser(name, password, authAPI);
 
             if(response){
                 navigate("/menu"); //Redirige a la página de inicio si la respuesta
