@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@playwright/test": "^1.51.1",
+    "@playwright/test": "^1.52.0",
     "@types/axios": "^0.9.36",
     "@types/node": "^22.13.13",
     "@types/react": "^18.3.18",

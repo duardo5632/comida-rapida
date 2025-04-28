@@ -1,18 +1,11 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test("Verificar si el inicio de seccion sirve o no", async ({ page }) => {
+  await page.goto("/login");
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
-
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  await page.getByRole("textbox", { name: "Nombre" }).fill("Eduardo");
+  await page.getByRole("textbox", { name: "Nombre" }).press("Enter");
+  await page.getByRole("textbox", { name: "Contraseña" }).fill("tnt5043849");
+  await page.getByRole("textbox", { name: "Contraseña" }).press("Enter");
+  await expect(page).toHaveURL("/menu");
 });

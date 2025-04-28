@@ -1,14 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Roboto:ital,wght@0,300;1,300&display=swap');
-
-h2{
-    font-family: "Roboto";
-}
-
-p{
-    font-family: "Inter";
-}
-
 html, body {
     height: 100%;
     margin: 0;
@@ -18,6 +7,37 @@ html, body {
     align-items: center;
 }
 
+h1{
+    font-family: "Roboto";
+    text-align: center;
+}
+
+p{
+    font-family: "Inter";
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto";
+    padding: 5px 0px 0px 0px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input {
+    width: 300px;
+    padding: 10px ;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
 .login {
     display: flex;
     flex-direction: column;
@@ -25,19 +45,6 @@ html, body {
     justify-content: center;
     width: 100%;
     max-width: 400px; /* Ajusta el ancho máximo */
-}
-/* revisar */
-.container_name {
-    display: flex;
-    flex-direction: column;
-    font-family: "Roboto";
-}
-
-.container_password {
-    display: flex;
-    flex-direction: column;
-    font-family: "Roboto";
-    padding: 5px 0px 0px 0px;
 }
 
 /* Envolver el input y el icono */
@@ -61,35 +68,11 @@ html, body {
     color: #000000;
 }
 
-
-label {
-    font-weight: bold;
-    font-size: 14px;
-}
-
-input {
-    width: 300px;
-    padding: 10px ;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-input:focus {
-    border-color: #aaa;
-}
-
 .error-message {
     color: red;
     font-size: 14px;
     margin: 0px;
     font-family: "Inter";
-}
-
-.container-button{
-    margin: 25px 0px;
 }
 
 .button {
@@ -106,7 +89,8 @@ input:focus {
     text-align: center;
     transition: background-color 0.3s ease;
     font-family: "Roboto";
-    box-sizing: border-box; /* Asegura que el padding se incluya dentro del tamaño */
+    box-sizing: border-box; 
+    margin: 25px 0px;
 }
 
 .button:hover {
@@ -132,3 +116,17 @@ input:focus {
     object-fit: cover; /* Evita que la imagen se deforme */
     position: absolute;
 }
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-top: 3px solid #888;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
