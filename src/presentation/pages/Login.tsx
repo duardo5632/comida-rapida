@@ -6,7 +6,7 @@ import { authAPI } from "../../infrastructure/api/AuthAPI";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 
-//porque es default
+
 export default function Login() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
