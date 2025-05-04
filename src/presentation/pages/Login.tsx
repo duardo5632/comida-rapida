@@ -6,7 +6,6 @@ import { authAPI } from "../../infrastructure/api/AuthAPI";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 
-//porque es default
 export default function Login() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -85,12 +84,9 @@ export default function Login() {
               </button>
             </div>
 
-            {/* Error message */}
             <p className="error-message">{errorMessage}</p>
 
-            {/* Botón de iniciar sesión */}
             <button type="submit" className="button" disabled={isLoading}>
-              {/*ver bien*/}
               {isLoading ? <div className="spinner"></div> : "Iniciar sesión"}
             </button>
           </form>
