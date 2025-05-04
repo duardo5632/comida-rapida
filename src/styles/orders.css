@@ -1,0 +1,91 @@
+.Orders{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+    "sidebar topbar"
+    "sidebar content";
+    height: 100vh;
+}
+
+.bar{
+    background-color: rgb(33, 33, 33);
+    grid-area: topbar;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    color: aliceblue;
+    margin: 0;
+}
+
+.navegation_bar{
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;  
+}
+
+.graph{
+    width: 30px;
+    height: 30px;
+}
+
+.avatar{
+    width: 30px;
+    height: 30px;
+}
+
+.entrega{
+    width: 30px;
+    height: 30px;
+}
+
+.searchs{
+    width: 30px;
+    height: 30px;
+}
+
+.search_button{
+    margin: 0px 0px 0px 5px;
+}
+
+.search_button:hover{
+    background-color: #333; 
+}
+
+.new_order{
+    margin-left: auto;
+}
+
+.new_order:hover{
+    background-color: #333; 
+}
+
+.search{
+    display: flex;
+    flex-direction: flex-start;
+    margin: 0px 8%;
+
+}
+
+.food {
+    margin: clamp(0rem,3rem, 5rem);
+}
+  
+.table{
+    display: flex;
+    flex-direction: column;
+    margin: clamp(1rem, 3%, 2rem) clamp(1.5rem, 15vw, 6rem) clamp(1rem, 3%, 2rem) clamp(1.5rem, 15vw, 6rem);  
+}
+
+.table_orders{
+    width: 100%;
+    table-layout: fixed; 
+    border-collapse: collapse;
+}

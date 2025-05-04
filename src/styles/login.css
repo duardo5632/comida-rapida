@@ -1,53 +1,37 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden; /* Evita el scroll */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h1{
-    font-family: "Roboto";
-    text-align: center;
-}
-
-p{
-    font-family: "Inter";
-}
-
-label {
+.container{
     display: flex;
     flex-direction: column;
-    font-family: "Roboto";
-    padding: 5px 0px 0px 0px;
-}
-
-label {
-    font-weight: bold;
-    font-size: 14px;
-}
-
-input {
-    width: 300px;
-    padding: 10px ;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    outline: none;
-    transition: border-color 0.3s ease;
+    align-items: center;
+    justify-content: center; 
+    height: 95vh;            
 }
 
 .login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    justify-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 400px; /* Ajusta el ancho máximo */
+    max-width: 400px; 
 }
 
-/* Envolver el input y el icono */
+.logo-container {
+    display: grid;
+    justify-items: center; 
+    align-items: center;  
+    width: 80px;
+    height: 80px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 4px solid #080808;
+    overflow: hidden; 
+    
+}
+
+.logo {
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover; 
+}
+
 .password-wrapper {
     position: relative;
     display: flex;
@@ -55,7 +39,6 @@ input {
     width: 100%;
 }
 
-/* Estilos del botón de mostrar/ocultar contraseña */
 .toggle-password {
     position: absolute;
     top: 50%;
@@ -79,43 +62,13 @@ input {
     width: 100%;
     max-width: 350px;
     padding: 10px 112px;
-    background-color: #111;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    font-family: "Roboto";
-    box-sizing: border-box; 
     margin: 25px 0px;
 }
 
-.button:hover {
-    background-color: #333; /* Un poco más claro al pasar el mouse */
+.button:hover{
+    background-color: #333; 
 }
 
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    background-color: #eee;
-    border-radius: 50%;
-    border: 4px solid #080808; /* Color del borde */
-    overflow: hidden; /* Recorta cualquier parte del logo que sobresalga */
-    position: relative;
-}
-
-.logo {
-    width: 100%;  /* Ajusta el tamaño del logo */
-    height: 100%; /* Para que llene completamente el círculo */
-    object-fit: cover; /* Evita que la imagen se deforme */
-    position: absolute;
-}
 .spinner {
     width: 20px;
     height: 20px;
@@ -129,4 +82,12 @@ input {
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+  .name-input{
+    width: 300px;
+  }
+
+  .password-input{
+    width: 300px;
   }

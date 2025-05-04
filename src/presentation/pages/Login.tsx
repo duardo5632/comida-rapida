@@ -34,24 +34,25 @@ export default function Login() {
   };
 
   return (
-    <>
+    <div className="container">
+      <header className="logo-container">
+        <img src="/image/logo.png" alt="Logo" className="logo" />
+      </header>
+
       <main className="login">
-        <header className="logo-container">
-          <img src="/image/logo.png" alt="Logo" className="logo" />
-        </header>
+        <h1>Iniciar Sesión</h1>
 
-        <section>
-          <h1>Iniciar Sesión</h1>
-
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              handleSubmit();
-            }}
-          >
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit();
+          }}
+        >
+          <section>
             <label htmlFor="nombre">Nombre</label>
 
             <input
+              className="name-input"
               id="nombre"
               type="text"
               value={name}
@@ -68,6 +69,7 @@ export default function Login() {
             <label htmlFor="password">Contraseña</label>
             <div className="password-wrapper">
               <input
+                className="password-input"
                 id="password"
                 type={showPassword ? "text" : "password"}
                 value={password}
@@ -89,9 +91,9 @@ export default function Login() {
             <button type="submit" className="button" disabled={isLoading}>
               {isLoading ? <div className="spinner"></div> : "Iniciar sesión"}
             </button>
-          </form>
-        </section>
+          </section>
+        </form>
       </main>
-    </>
+    </div>
   );
 }

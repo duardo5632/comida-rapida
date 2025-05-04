@@ -2,7 +2,6 @@ const API_URL = import.meta.env.VITE_API_URL; //URL de la API, se obtiene de las
 import axios from "axios";
 import { UserRepository } from "../../domain/repositories/UserRepository";
 
-//hay otra forma de hacerlo?
 interface LoginAPIResponse {
   exito: boolean;
 }
