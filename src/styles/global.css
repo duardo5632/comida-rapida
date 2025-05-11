@@ -47,3 +47,9 @@ th, td {
     text-align: center;
     padding: 5px;
 }
+
+table{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}

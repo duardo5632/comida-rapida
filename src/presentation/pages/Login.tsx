@@ -22,7 +22,7 @@ export default function Login() {
       const response = await loginUser(name, password, authAPI);
 
       if (response) {
-        navigate("/menu");
+        navigate("/Orders");
       } else {
         setErrorMessage("contraseña o nombre incorrecto");
       }

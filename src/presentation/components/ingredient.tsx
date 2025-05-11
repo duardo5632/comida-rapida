@@ -1,13 +1,17 @@
 import "../../styles/ingredient.css";
 
 interface Props {
+  comida: string;
   ingre: string;
 }
 
-const Ingredient = ({ ingre }: Props) => {
+const Ingredient = ({ ingre, comida }: Props) => {
   return (
     <div>
-      <p className="ingredient">{ingre}</p>
+      <p className="ingredient-card">{comida}:</p>
+      <div className="ingredient">
+        <p>{ingre}</p>
+      </div>
     </div>
   );
 };

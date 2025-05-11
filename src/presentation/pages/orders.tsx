@@ -30,31 +30,41 @@ const orders = () => {
         </section>
         <section className="table">
           <table className="table_orders">
-            <tr>
-              <th>Comida</th>
-              <th>Bebida</th>
-              <th>Quitar ingredientes</th>
-              <th>Nombre</th>
-              <th>Mesa</th>
-              <th>Tiempo de espera</th>
-              <th>Delivery</th>
-              <th>Estado</th>
-            </tr>
-            <tr>
-              <td>Hamburguesa</td>
-              <td>Pepsi</td>
-              <td className="ingredient_list">
-                <Ingredient ingre="tomate" />
-                <Ingredient ingre="cebolla" />
-                <Ingredient ingre="salsa de tomate" />
-                <Ingredient ingre="gfsadad" />
-              </td>
-              <td>Juan Perez</td>
-              <td>5</td>
-              <td>20 min</td>
-              <td>Si</td>
-              <td>Eliminar</td>
-            </tr>
+            <thead>
+              <tr>
+                <th>atencion</th>
+                <th>Comida</th>
+                <th>Bebida</th>
+                <th>Quitar ingredientes</th>
+                <th>Nombre</th>
+                <th>Mesa</th>
+                <th>Tiempo de espera</th>
+                <th>Delivery</th>
+                <th>Estado</th>
+                <th>pago</th>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <td>Maria</td>
+                <td>Hamburguesa</td>
+                <td>Pepsi</td>
+                <td>
+                  <div className="ingredient_list">
+                    <Ingredient
+                      comida="hola"
+                      ingre="Holaasdasdsad adsda sdasdas"
+                    />
+                  </div>
+                </td>
+                <td>Juan Perez eduardo primera</td>
+                <td>5</td>
+                <td>20 min</td>
+                <td>Si</td>
+                <td>Eliminar conceptos de no se</td>
+                <td>Pagado</td>
+              </tr>
+            </thead>
           </table>
         </section>
       </main>
